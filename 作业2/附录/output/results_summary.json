@@ -1,0 +1,308 @@
+{
+  "q2_louvain": {
+    "algorithm": "Louvain (multilevel modularity optimization)",
+    "dataset": "Zachary Karate Club",
+    "nodes": 34,
+    "edges": 78,
+    "num_communities": 4,
+    "modularity": 0.44490358126721763,
+    "runtime_sec": 0.001398583990521729,
+    "figure": "figures/q2_karate_louvain.png",
+    "partition": {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 3,
+      "5": 3,
+      "6": 3,
+      "7": 0,
+      "8": 1,
+      "9": 1,
+      "10": 3,
+      "11": 0,
+      "12": 0,
+      "13": 0,
+      "14": 1,
+      "15": 1,
+      "16": 3,
+      "17": 0,
+      "18": 1,
+      "19": 0,
+      "20": 1,
+      "21": 0,
+      "22": 1,
+      "23": 2,
+      "24": 2,
+      "25": 2,
+      "26": 1,
+      "27": 2,
+      "28": 2,
+      "29": 1,
+      "30": 1,
+      "31": 2,
+      "32": 1,
+      "33": 1
+    }
+  },
+  "q2_deepwalk_compare": {
+    "deepwalk_embed_sec": 0.0759878340177238,
+    "kmeans_sec": 0.11679999995976686,
+    "modularity_deepwalk_kmeans": 0.357798766889676,
+    "modularity_louvain": 0.4438541256723075,
+    "num_communities": 4,
+    "figure": "figures/q2_deepwalk_kmeans.png"
+  },
+  "q3_centrality": {
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        4,
+        6
+      ],
+      [
+        5,
+        6
+      ]
+    ],
+    "nodes": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "table_csv": ",degree,betweenness,closeness,eigenvector,rank_degree,rank_betweenness,rank_closeness,rank_eigenvector\n0,0.333333,0.0,0.4,0.362003,5,5,7,4\n1,0.5,0.133333,0.545455,0.490383,1,3,3,2\n2,0.5,0.133333,0.545455,0.490383,1,3,3,1\n3,0.5,0.6,0.666667,0.476196,1,1,1,3\n4,0.5,0.533333,0.6,0.309381,1,2,2,5\n5,0.333333,0.0,0.428571,0.181002,5,5,5,6\n6,0.333333,0.0,0.428571,0.181002,5,5,5,6\n"
+  },
+  "q4_pagerank": {
+    "dataset": "SNAP soc-sign-bitcoinotc (directed, weighted trust ratings)",
+    "nodes": 5881,
+    "edges": 35592,
+    "pagerank_runtime_sec": 0.02395599998999387,
+    "corr_pr_vs_weighted_indegree": 0.9316210920235116,
+    "top20_pagerank": [
+      {
+        "node": 35,
+        "pagerank": 0.014254555265923997
+      },
+      {
+        "node": 2642,
+        "pagerank": 0.011365464479207178
+      },
+      {
+        "node": 7,
+        "pagerank": 0.0077968140343445
+      },
+      {
+        "node": 2028,
+        "pagerank": 0.007668866569951181
+      },
+      {
+        "node": 1810,
+        "pagerank": 0.007181991629774833
+      },
+      {
+        "node": 1,
+        "pagerank": 0.006739759277553137
+      },
+      {
+        "node": 4172,
+        "pagerank": 0.005624723190209018
+      },
+      {
+        "node": 905,
+        "pagerank": 0.005407417746997033
+      },
+      {
+        "node": 1953,
+        "pagerank": 0.00526639699606764
+      },
+      {
+        "node": 3744,
+        "pagerank": 0.004831754533666673
+      },
+      {
+        "node": 832,
+        "pagerank": 0.004451524417452955
+      },
+      {
+        "node": 1018,
+        "pagerank": 0.004405238010304341
+      },
+      {
+        "node": 4197,
+        "pagerank": 0.004174812073195333
+      },
+      {
+        "node": 2125,
+        "pagerank": 0.004075492824911441
+      },
+      {
+        "node": 25,
+        "pagerank": 0.003721885984144899
+      },
+      {
+        "node": 13,
+        "pagerank": 0.0036712265872896207
+      },
+      {
+        "node": 202,
+        "pagerank": 0.003526217283166588
+      },
+      {
+        "node": 3897,
+        "pagerank": 0.0032494507373327574
+      },
+      {
+        "node": 1386,
+        "pagerank": 0.003221409730123718
+      },
+      {
+        "node": 1383,
+        "pagerank": 0.003189743952596888
+      }
+    ],
+    "figure": "figures/q4_pagerank_scatter.png"
+  },
+  "q5_embedding_influence": {
+    "note": "DeepWalk embedding L2 norm as shallow neural influence proxy",
+    "subgraph_nodes": 900,
+    "subgraph_edges": 5222,
+    "spearman_inf_vs_pagerank": 0.15339137006298573,
+    "spearman_inf_vs_degree_cent": -0.004458078102503143,
+    "spearman_inf_vs_betweenness": 0.08717520066214353,
+    "top15_embedding_influence": [
+      {
+        "696": 5.863443851470947
+      },
+      {
+        "883": 5.751605033874512
+      },
+      {
+        "722": 5.251360893249512
+      },
+      {
+        "571": 5.1876373291015625
+      },
+      {
+        "723": 5.165463447570801
+      },
+      {
+        "570": 5.136228084564209
+      },
+      {
+        "564": 5.0075788497924805
+      },
+      {
+        "695": 5.003174781799316
+      },
+      {
+        "641": 4.979078769683838
+      },
+      {
+        "573": 4.938745975494385
+      },
+      {
+        "510": 4.905526638031006
+      },
+      {
+        "598": 4.868630409240723
+      },
+      {
+        "614": 4.850849151611328
+      },
+      {
+        "513": 4.825038909912109
+      },
+      {
+        "673": 4.7876715660095215
+      }
+    ]
+  },
+  "q6_large_network": {
+    "basic_stats": {
+      "nodes": 1005,
+      "edges": 25571,
+      "density": 0.025342411448732432,
+      "avg_degree_undirected": 33.245771144278606,
+      "largest_cc_nodes": 986,
+      "largest_cc_edges_undirected": 16687,
+      "avg_clustering": 0.4070504475195386,
+      "average_shortest_path_length_giant": 2.586933824816466
+    },
+    "figures": {
+      "degree_hist": "figures/q6_degree_hist.png",
+      "deepwalk_layout": "figures/q6_deepwalk_layout.png"
+    },
+    "community": {
+      "louvain_modularity": 0.4290968673758256,
+      "deepwalk_kmeans_modularity": 0.4124775001680786,
+      "num_communities_louvain": 8,
+      "num_communities_deepwalk": 8,
+      "runtime_louvain_sec": 0.09014016692526639,
+      "runtime_deepwalk_total_sec": 1.3427239999873564
+    },
+    "influence": {
+      "spearman_degree_vs_pagerank": 0.8961651007874818,
+      "spearman_emb_vs_pagerank": 0.2322170941937284,
+      "spearman_emb_vs_degree": 0.20525463704918373,
+      "top_nodes_pagerank": [
+        "1",
+        "130",
+        "160",
+        "62",
+        "86",
+        "107",
+        "365",
+        "121",
+        "5",
+        "129",
+        "183",
+        "64"
+      ],
+      "top_nodes_embedding_norm": [
+        "414",
+        "605",
+        "846",
+        "645",
+        "479",
+        "697",
+        "907",
+        "927",
+        "335",
+        "43",
+        "957",
+        "9"
+      ]
+    }
+  }
+}
