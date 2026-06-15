@@ -1,0 +1,104 @@
+{
+  "q1": {
+    "model": "BA 无标度网络 (Barabási–Albert)",
+    "nodes": 15,
+    "edges": 36,
+    "average_degree": 4.8,
+    "density": 0.34285714285714286,
+    "diameter_giant": 3,
+    "average_shortest_path_giant": 1.6666666666666667,
+    "average_clustering": 0.6073504273504273,
+    "degree_distribution": {
+      "1": 1,
+      "3": 6,
+      "4": 2,
+      "5": 2,
+      "6": 2,
+      "10": 1,
+      "13": 1
+    },
+    "construction": "从 m=3 个节点的完全图出发，每次加入 1 个新节点并向已有节点连 m 条边，连边概率与节点度成正比（优先连接）。参数：N={N}, m={m}, seed={seed}。",
+    "formulas": {
+      "average_degree": "\\bar{k}=2m/N",
+      "density": "\\rho=2m/(N(N-1))",
+      "clustering": "C_i=2T_i/(k_i(k_i-1)), \\bar{C}=\\frac1N\\sum C_i",
+      "apl_diameter": "在最大连通分量上由最短路径算法计算"
+    },
+    "figure_degree_hist": "figures/q1_degree_hist.png",
+    "figure_layout": "figures/q1_layout.png"
+  },
+  "q2": {
+    "error": "Traceback (most recent call last):\n  File \"/Users/xiaotaiyang/Downloads/大三下/图论与网络/作业/作业3/run_all.py\", line 15, in safe\n    return fn()\n  File \"/Users/xiaotaiyang/Downloads/大三下/图论与网络/作业/作业3/src/q2_four_models.py\", line 131, in main\n    ring_df = sweep_ring()\n  File \"/Users/xiaotaiyang/Downloads/大三下/图论与网络/作业/作业3/src/q2_four_models.py\", line 32, in sweep_ring\n    G = ring_lattice_graph(n, k)\n        ^^^^^^^^^^^^^^^^^^\nNameError: name 'ring_lattice_graph' is not defined\n"
+  },
+  "q3": {
+    "n": 400,
+    "note": "数值演示巨片随 p 增大突然出现；教材极限理论给出阈值为 np→1。",
+    "critical_p_approx": 0.002506265664160401,
+    "curve_csv": "p,mean_frac,std_frac\n0.00050000,0.011583,0.003622\n0.00107353,0.019417,0.005689\n0.00164706,0.033917,0.014559\n0.00222059,0.071833,0.031642\n0.00279412,0.184583,0.093113\n0.00336765,0.406500,0.089899\n0.00394118,0.624167,0.072699\n0.00451471,0.747333,0.047046\n0.00508824,0.797000,0.041162\n0.00566176,0.846000,0.019532\n0.00623529,0.888083,0.023776\n0.00680882,0.919583,0.016100\n0.00738235,0.940667,0.016188\n0.00795588,0.953333,0.012338\n0.00852941,0.959917,0.009541\n0.00910294,0.970250,0.010395\n0.00967647,0.978167,0.007244\n0.01025000,0.984083,0.006937\n0.01082353,0.985250,0.006562\n0.01139706,0.989417,0.006667\n0.01197059,0.991917,0.004504\n0.01254412,0.992833,0.005072\n0.01311765,0.994000,0.003797\n0.01369118,0.996167,0.003210\n0.01426471,0.997000,0.002614\n0.01483824,0.997333,0.002494\n0.01541176,0.998500,0.001658\n0.01598529,0.998833,0.002014\n0.01655882,0.999000,0.001658\n0.01713235,0.999083,0.001512\n0.01770588,0.999167,0.001344\n0.01827941,0.999083,0.001644\n0.01885294,0.999833,0.000624\n0.01942647,0.999583,0.000932\n0.02000000,0.999667,0.001067",
+    "figure": "figures/q3_giant_component.png"
+  },
+  "q5": {
+    "note": "下图若与教师给定示意图不一致，请修改 src/q5_search.py 中边表后重跑。",
+    "nodes": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        3,
+        5
+      ],
+      [
+        4,
+        6
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        6,
+        7
+      ],
+      [
+        7,
+        8
+      ]
+    ],
+    "s": 0,
+    "t": 8,
+    "bfs_shortest_path_length_edges": 5,
+    "max_degree_walk_steps": 5,
+    "max_degree_walk_success": true,
+    "random_walk_mean_steps_est": 47.415,
+    "random_walk_hit_rate": 1.0,
+    "figure": "figures/q5_graph.png"
+  }
+}

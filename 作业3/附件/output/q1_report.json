@@ -1,0 +1,28 @@
+{
+  "model": "BA 无标度网络 (Barabási–Albert)",
+  "nodes": 15,
+  "edges": 36,
+  "average_degree": 4.8,
+  "density": 0.34285714285714286,
+  "diameter_giant": 3,
+  "average_shortest_path_giant": 1.6666666666666667,
+  "average_clustering": 0.6073504273504273,
+  "degree_distribution": {
+    "1": 1,
+    "3": 6,
+    "4": 2,
+    "5": 2,
+    "6": 2,
+    "10": 1,
+    "13": 1
+  },
+  "construction": "从 m=3 个节点的完全图出发，每次加入 1 个新节点并向已有节点连 m 条边，连边概率与节点度成正比（优先连接）。参数：N={N}, m={m}, seed={seed}。",
+  "formulas": {
+    "average_degree": "\\bar{k}=2m/N",
+    "density": "\\rho=2m/(N(N-1))",
+    "clustering": "C_i=2T_i/(k_i(k_i-1)), \\bar{C}=\\frac1N\\sum C_i",
+    "apl_diameter": "在最大连通分量上由最短路径算法计算"
+  },
+  "figure_degree_hist": "figures/q1_degree_hist.png",
+  "figure_layout": "figures/q1_layout.png"
+}
